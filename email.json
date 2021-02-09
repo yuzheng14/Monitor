@@ -1,0 +1,9 @@
+{
+    "host": "smtp.qq.com",
+    "user": "422450117",
+    "password": "ekovxldzbnoncagi",
+    "sender": "422450117@qq.com",
+    "receivers": [
+        "422450117@qq.com"
+    ]
+}

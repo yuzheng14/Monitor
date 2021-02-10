@@ -4,7 +4,7 @@ from send_email import send_email
 import time
 import json
 crawler=Crawler()
-last_first_title='关于完善课程描述等有关课程信息的通知'
+last_first_title=''
 
 def examine(titles):
     global last_first_title

@@ -6,5 +6,5 @@ data = {'host': 'smtp.qq.com',
         'password': '',
         'sender': '',
         'receivers': ['']}
-with open('email.json', 'w') as f:
+with open('config.json', 'w') as f:
     data = json.dump(data,f)

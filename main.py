@@ -28,6 +28,8 @@ while(True):
         send_email(content,titles[:order])
         log(F'[INFO]:教务处工作通知已更新{order}条通知，并已发送邮件')
         
+    elif order==-1:
+        log('[INFO]:初始化系统')
     else:
         log('[INFO]:教务处工作通知未更新通知')
         

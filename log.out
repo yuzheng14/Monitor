@@ -20,3 +20,9 @@
 2021-02-09 22:07:25	[INFO]:推送通知“山东大学（威海）双创教育课程及信息社会类通识教育核心课程建设的通知”成功
 2021-02-09 22:07:25	[INFO]:教务处工作通知已更新3条通知，并已发送邮件
 2021-02-09 22:08:25	[INFO]:教务处工作通知未更新通知
+2021-03-12 16:39:45	[INFO]:山东大学（威海）教务处工作通知监控系统已启动
+2021-03-12 16:39:46	[error]:(535, b'Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256')
+2021-03-12 16:39:46	[INFO]:教务处工作通知已更新2条通知，并已发送邮件
+2021-03-12 16:41:11	[INFO]:山东大学（威海）教务处工作通知监控系统已启动
+2021-03-12 16:41:12	[error]:(535, b'Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256')
+2021-03-12 16:41:12	[INFO]:教务处工作通知已更新2条通知，并已发送邮件

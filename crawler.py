@@ -53,7 +53,7 @@ class Crawler:
                 data=etree.HTML(request.urlopen(url).read().decode()).xpath('//*[@id="content"]/div[2]/div[2]/form')
                 for i in data[0].getchildren()[1:]:
                     text+=etree.tostring(i).decode()
-            except:
+            except Exception:
                 text+=request.urlopen(url).read().decode()
 
             content.append(text)

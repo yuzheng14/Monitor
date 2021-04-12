@@ -54,7 +54,7 @@ class Crawler:
                 for i in data[0].getchildren()[1:]:
                     text+=etree.tostring(i).decode()
             except Exception:
-                text+=request.urlopen(url).read().decode()
+                text+='当前页面无法访问，请单击超链接前往网页'
 
             content.append(text)
             

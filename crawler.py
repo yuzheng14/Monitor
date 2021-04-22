@@ -1,6 +1,6 @@
 from urllib import request
 from lxml import etree
-
+from log import log
 
 class Crawler:
     __url__ = 'https://jwc.wh.sdu.edu.cn/gztz.htm'
@@ -53,8 +53,9 @@ class Crawler:
                 data=etree.HTML(request.urlopen(url).read().decode()).xpath('//*[@id="content"]/div[2]/div[2]/form')
                 for i in data[0].getchildren()[1:]:
                     text+=etree.tostring(i).decode()
-            except Exception:
-                text+='当前页面无法访问，请单击超链接前往网页'
+            except:
+                log(F'爬取{url}失败')
+                text+=F'当前页面无法访问，请单击超链接前往网页'
 
             content.append(text)
             

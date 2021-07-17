@@ -4,7 +4,7 @@ from send_email import send_email
 import time
 import json
 crawler=Crawler()
-last_first_title='关于参加第十八届（2021年）山东省大学生机电产品创新设计竞赛的通知'
+last_first_title=''
 
 def examine(titles):
     global last_first_title

@@ -1,6 +1,7 @@
 from log import log
 from crawler import Crawler
 from send_email import send_email
+from send_email import send_email_start_up
 import time
 import json
 crawler=Crawler()
@@ -18,7 +19,7 @@ def examine(titles):
         return -1
     return -1
 log('[INFO]:山东大学（威海）教务处工作通知监控系统已启动')
-send_email("山东大学（威海）教务处工作通知监控系统已启动", "山东大学（威海）教务处工作通知监控系统已启动")
+send_email_start_up()
 while(True):
     # 返回19个通知的title
     crawler.crawl()

@@ -36,6 +36,32 @@ def send_email(content, titles):
     except smtplib.SMTPException as e:
         log(f'[error]:{e}')
 
+def send_email_start_up():
+    with open('config.json', 'r') as f:
+        data = json.load(f)
+    mail_host = data['host']
+    mail_user = data['user']
+    mail_password = data['password']
+    sender = data['sender']
+    receivers = data['receivers']
+    
+    
+    message = MIMEText("山东大学（威海）教务处工作通知监控系统已启动", 'html', 'utf-8')
+    message['From'] = sender
+    message['To'] = ','.join(receivers)
+    message['Subject'] = "山东大学（威海）教务处工作通知监控系统已启动"
+
+    try:
+        smtpObj = smtplib.SMTP_SSL(mail_host, 465)
+        smtpObj.login(mail_user, mail_password)
+
+        smtpObj.sendmail(sender, receivers, message.as_string())
+        title = message['Subject']
+        log(f'[INFO]:推送通知“{title}”成功')
+        
+        smtpObj.quit()
+    except smtplib.SMTPException as e:
+        log(f'[error]:{e}')
 
 if __name__ == '__main__':
     crawler = Crawler()

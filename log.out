@@ -58,3 +58,8 @@
 2021-07-17 12:04:12	[INFO]:推送通知“务”成功
 2021-07-17 12:04:13	[error]:(550, b'Mail content denied. http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=20022&&no=1000726 [MGaDZX8uYDV9eGpqm5Gp+GuTVZxPWmElfVzr7ZE5zEoSJdWCYg+qVCjCP0mURnT9QA== IP: 42.193.122.17]')
 2021-07-17 12:04:13	[INFO]:初始化系统
+2021-07-17 12:14:22	[INFO]:山东大学（威海）教务处工作通知监控系统已启动
+2021-07-17 12:14:23	[error]:(550, b'Mail content denied. http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=20022&&no=1000726 [MGaDZX8uYDV9eGpqm5Gp+GtvjaKMifmxPqyKbjTRgZ3z1rKu0XlWeBy3odpCMoG+iA== IP: 42.193.122.17]')
+2021-07-17 12:14:23	[INFO]:初始化系统
+2021-07-17 12:20:08	[INFO]:山东大学（威海）教务处工作通知监控系统已启动
+2021-07-17 12:20:09	[INFO]:初始化系统

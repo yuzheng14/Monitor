@@ -56,9 +56,7 @@ def send_email_start_up():
         smtpObj.login(mail_user, mail_password)
 
         smtpObj.sendmail(sender, receivers, message.as_string())
-        title = message['Subject']
-        log(f'[INFO]:推送通知“{title}”成功')
-        
+
         smtpObj.quit()
     except smtplib.SMTPException as e:
         log(f'[error]:{e}')

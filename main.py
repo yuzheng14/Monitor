@@ -18,6 +18,7 @@ def examine(titles):
         return -1
     return -1
 log('[INFO]:山东大学（威海）教务处工作通知监控系统已启动')
+send_email("山东大学（威海）教务处工作通知监控系统已启动", "山东大学（威海）教务处工作通知监控系统已启动")
 while(True):
     # 返回19个通知的title
     crawler.crawl()

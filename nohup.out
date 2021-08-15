@@ -1,0 +1,43 @@
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/urllib/request.py", line 1349, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/usr/lib64/python3.6/http/client.py", line 1254, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib64/python3.6/http/client.py", line 1300, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.6/http/client.py", line 1249, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib64/python3.6/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/lib64/python3.6/http/client.py", line 974, in send
+    self.connect()
+  File "/usr/lib64/python3.6/http/client.py", line 1407, in connect
+    super().connect()
+  File "/usr/lib64/python3.6/http/client.py", line 946, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/usr/lib64/python3.6/socket.py", line 704, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib64/python3.6/socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 25, in <module>
+    crawler.crawl()
+  File "/code/repostories/monitor/crawler.py", line 12, in crawl
+    self.__html = request.urlopen(self.__url__)
+  File "/usr/lib64/python3.6/urllib/request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib64/python3.6/urllib/request.py", line 526, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python3.6/urllib/request.py", line 544, in _open
+    '_open', req)
+  File "/usr/lib64/python3.6/urllib/request.py", line 504, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python3.6/urllib/request.py", line 1392, in https_open
+    context=self._context, check_hostname=self._check_hostname)
+  File "/usr/lib64/python3.6/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno -2] Name or service not known>

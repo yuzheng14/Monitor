@@ -11,6 +11,7 @@ import json
 
 
 def send_email(content, titles):
+    # 读取config.json配置发信者信息及收信者信息
     with open('config.json', 'r') as f:
         data = json.load(f)
     mail_host = data['host']

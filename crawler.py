@@ -13,11 +13,11 @@ class Crawler:
         self.__html_content__ = self.__html.read().decode()
         self.__selector__ = etree.HTML(self.__html_content__)
         self.__data__ = self.__selector__.xpath(
-            '//*[@id="content"]/div[2]/div[2]/div[1]/ul')
-        self.__children__ = self.__data__[0].getchildren()
+            '//*[@id="content"]/div[2]/div[2]/div[1]/ul') #定位通知所在的无序列表
+        self.__children__ = self.__data__[0].getchildren() # 获取子节点
         self.__nodes__ = []
         for child in self.__children__:
-            self.__nodes__.append(child.getchildren()[0])
+            self.__nodes__.append(child.getchildren()[0]) # 取子节点中的第一个子节点，即通知名称及超链接所在节点
 
     def crawl_titles(self):
         '''
@@ -50,7 +50,7 @@ class Crawler:
             
             text=f'<a href=\'{url}\'>点此前往通知页面</a>'
             try:
-                data=etree.HTML(request.urlopen(url).read().decode()).xpath('//*[@id="content"]/div[2]/div[2]/form')
+                data=etree.HTML(request.urlopen(url).read().decode()).xpath('//*[@id="content"]/div[2]/div[2]/form') # 通知具体内容
                 for i in data[0].getchildren()[1:]:
                     text+=etree.tostring(i).decode()
             except:

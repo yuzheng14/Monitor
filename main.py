@@ -4,6 +4,7 @@ from send_email import send_email
 from send_email import send_email_start_up
 import time
 import json
+
 crawler=Crawler()
 last_first_title=''
 
@@ -38,4 +39,4 @@ while(True):
     with open('config.json','r') as f:
         data=json.load(f)
     
-    time.sleep(data['interval'])
+    time.sleep(data['interval']) # 读取配置文件以进行特定时间的休眠
